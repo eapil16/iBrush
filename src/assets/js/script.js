@@ -61,4 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		suppressScrollY:true,
 		swipeEasing:true,
 	});
+
+	window.addEventListener('resize', function () {
+		ps.update();
+	});
+
 });
