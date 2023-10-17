@@ -1,0 +1,141 @@
+doctype html
+html(lang="ru")
+	include modules/head	
+
+	body
+		.wrapper 
+			
+			include modules/header
+			
+			main.main-section
+
+				.banner 
+					.container-fluid
+						h1 Путь JavaScript
+						.banner-content 
+							.banner-content__block 
+								.banner-content__block_date 
+									p.banner-content__block_date_number 12 
+									p.banner-content__block_date_month Апреля
+								.banner-content__block_image 
+									img(src="assets/images/banner.png", alt="")
+							.banner-content__info
+								p Можно выделить три основных направления для прогресса JavaScript 
+
+				.block-quote
+					.container-fluid
+						h2 Серверный JavaScript
+						.block-quote__block
+							.block-quote__block_icon
+								img(src="assets/images/quote.svg", alt="")
+							.block-quote__block_content
+								p Разработчики и клиенты часто неправильно понимают, что такое система. Они видят графический интерфейс и думают, что он и есть система. Они определяют систему в терминах графического интерфейса и считают, что должны сразу начать работу с графическим интерфейсом. Они не понимают важнейшего принципа: ввод/вывод не важен. 
+								p.signature Р. Мартин
+
+				.adv-block 
+					.adv-block__content 
+						picture
+							source(srcset="assets/images/book-small.png" media="(max-width: 767px)")
+							img(src="assets/images/book.png" alt="")
+						p Реклама на 
+							a(href="#") blabla.com
+
+				.conclusion 
+					.container-fluid
+						h2 Заключение
+						p Синхрония осознаёт сюжетный верлибр. Мифопорождающее текстовое устройство диссонирует лирический субъект. Абстрактное высказывание пространственно просветляет деструктивный символ. Ямб, несмотря на то, что все эти характерологические черты отсылают не к единому образу нарратора, интегрирует мифопоэтический хронотоп. Действительно, ударение приводит палимпсест. Контрапункт приводит ритм.
+
+				.review 
+					.container-fluid
+						h2 Что вы думаете об этой книге?
+						.rating
+							p.title Оцените статью
+							.rating-area__content
+								span.rating-grade 1
+								.rating-area
+									input(type="radio" id="star-5" name="rating" value="5")
+									label(for="star-5" title="Оценка «5»")
+									input(type="radio" id="star-4" name="rating" value="4")
+									label(for="star-4" title="Оценка «4»")
+									input(type="radio" id="star-3" name="rating" value="3")
+									label(for="star-3" title="Оценка «3»")
+									input(type="radio" id="star-2" name="rating" value="2")
+									label(for="star-2" title="Оценка «2»")
+									input(type="radio" checked="checked" id="star-1" name="rating" value="1")
+									label(for="star-1" title="Оценка «1»")
+						form.review-form(action="")
+							p.title Добавить комментарий к книге
+							.review-form__block 
+								.review-form__block_item
+									.form-item
+										input(type="text" class="form-input" required="required")
+										label.form-label Имя
+								.review-form__block_item
+									.form-item
+										input(type="text" class="form-input" required="required")
+										label.form-label Email
+								.review-form__block_item
+									select(data-search-placeholder="Выберите книгу")
+										option(value="")
+										option(value="") JavaScript ниндзя
+										option(value="") Pragmatic Guide to JavaScript
+										option(value="") Pro JavaScript Techniques
+										option(value="") Выразительный JavaScript
+							textarea.textarea(placeholder="Ваш отзыв")
+							button.button.button-blue(type="submit") Отправить
+
+				.news 
+					.container-fluid
+						h2 Похожие посты
+						.news-slider.swiper
+							.swiper-wrapper
+								.swiper-slide
+									.news-slider__slide 
+										.news-slider__slide_image
+											a(href="#")
+												picture
+													source(srcset="assets/images/new-1-mobile.png" media="(max-width: 767px)")
+													img(src="assets/images/new-1.png" alt="")
+										p.news-slider__slide_date 12 декабря
+										a.news-slider__slide_link(href="#") События жизненного цикла ReactJS
+								.swiper-slide
+									.news-slider__slide 
+										.news-slider__slide_image
+											a(href="#")
+												picture
+													source(srcset="assets/images/new-2-mobile.png" media="(max-width: 767px)")
+													img(src="assets/images/new-2.png" alt="")
+										p.news-slider__slide_date 10 декабря
+										a.news-slider__slide_link(href="#") CSS Grids. Полное руководство
+								.swiper-slide
+									.news-slider__slide 
+										.news-slider__slide_image
+											a(href="#")
+												picture
+													source(srcset="assets/images/new-3-mobile.png" media="(max-width: 767px)")
+													img(src="assets/images/new-3.png" alt="")
+										p.news-slider__slide_date 5 декабря
+										a.news-slider__slide_link(href="#") Асинхронность в JavaScript
+							.swiper-pagination.news-slider-pagination
+													
+		.modal
+			.modal-content 
+				.modal-close 
+					svg(xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none")
+						path(fill-rule="evenodd" clip-rule="evenodd" d="M9.58579 11L4.63604 15.9498L6.05025 17.364L11 12.4142L15.9497 17.364L17.364 15.9498L12.4142 11L17.364 6.05026L15.9497 4.63604L11 9.58579L6.05025 4.63604L4.63604 6.05026L9.58579 11Z" fill="#202326")
+				p.title Начать учиться
+				p Оставьте заявку и наш менеджер вам перезвонит.
+				form.form(action="")
+					.form-item
+						input(type="text" class="form-input" required="required")
+						label.form-label Как вас зовут
+					.form-item
+						input(type="text" class="form-input" required="required")
+						label.form-label Ваш email
+					button.button.button-blue(type="submit") Отправить
+					p.agreement Нажимая кнопку «Отправить», вы соглашаетесь с 
+						a(href="#")  политикой конфиденциальности
+					
+
+
+		include modules/scripts

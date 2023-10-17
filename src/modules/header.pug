@@ -1,0 +1,39 @@
+header.header 
+    .container-fluid
+        .header-block 
+            .header-block__logo 
+                a(href="/") 
+                    img(src="assets/images/logo.svg", alt="") 
+            .header-block__content
+                .header__part.d-hid.header__toggle
+                    .menu-toggle-cont
+                        span.menu-toggle
+                .fixed-menu#nav
+                    .fixed-menu__content
+                        ul.main-menu 
+                            li.main-menu__item.main-menu__item-dropdown 
+                                a.main-menu__link(href="#") Статьи
+                                ul.main-menu__dropdown 
+                                    li.main-menu__dropdown_item 
+                                        a.main-menu__dropdown_link(href="#") Статья 1
+                                    li.main-menu__dropdown_item 
+                                        a.main-menu__dropdown_link(href="#") Статья 2
+                                    li.main-menu__dropdown_item 
+                                        a.main-menu__dropdown_link(href="#") Статья 3
+                                    li.main-menu__dropdown_item 
+                                        a.main-menu__dropdown_link(href="#") Статья 4
+                            li.main-menu__item.main-menu__item-dropdown  
+                                a.main-menu__link(href="#") Курсы
+                                ul.main-menu__dropdown 
+                                    li.main-menu__dropdown_item 
+                                        a.main-menu__dropdown_link(href="#") JavaScript Pro
+                                    li.main-menu__dropdown_item 
+                                        a.main-menu__dropdown_link(href="#") JavaScript для новчиков
+                                    li.main-menu__dropdown_item 
+                                        a.main-menu__dropdown_link(href="#") JavaScript ниндзя
+                            li.main-menu__item 
+                                a.main-menu__link(href="#") Новости
+                            li.main-menu__item 
+                                a.main-menu__link(href="#") О нас
+                        a.button.button-blue.modal-show(href="#") Начать учиться
+
